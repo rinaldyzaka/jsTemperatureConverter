@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+$bg-color: rgb(157,157,255) ;
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;   
+}
+body{
+    @include flexbox();
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: $bg-color;
+    border-style: dotted;  
+    font-family: 'Montserrat';
+}
+.container{
+    padding: 40px;
+    width: 600px;
+    height: auto;
+    position: relative;
+    .date, .time{
+        margin-top: 10px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+        #date{
+        font-size: 1.2em;
+        }
+         #time{
+        font-size: 2em;
+         }
+    .select-form{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .input-text, .change{
+        text-align: left;
+    }
+     .select, .input, .result{
+         padding: 0;
+         display: block;
+         width: 100%;
+         border: none;
+         box-sizing: border-box;
+     }
+      .input,.result,.select,.typecolor{
+        padding-right: 20px;
+        padding-left: 20px;
+        height: 50px;
+        font-size: 14px;
+        border-radius: 60px;
+        background-color: #ffff;
+    }
+    .buttonchange{
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 40px;
+        font-weight: 500;
+    }
+}
