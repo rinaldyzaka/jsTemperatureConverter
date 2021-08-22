@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Temperature</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!--snipping jquery and moments.js for get date and time-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--date and time-->
+        <div class="date" id="date">2021 August 21 SAT
+        </div>
+        <div class="time" id="time">PM 09.00
+        </div>
+        <!--form select-->
+        <div class="select-form">
+            <select name="from" id="from" onchange="select()">
+                <option value="cel">Celsius</option>
+                <option value="rea">Reamur</option>
+                <option value="fah">Fahrenheit</option>
+            </select>
+                 to
+            <select name="to" id="to" onchange="select()">
+                <option value="cel">Celsius</option>
+                <option value="rea">Reamur</option>
+                <option value="fah">Fahrenheit</option>
+            </select>
+        </div>
+        <!--input for typing number-->
+            <div class="input-text">
+                <label>Temperature</label>
+                <input class="input" type="number" id="fromNumb" placeholder="type number" onkeyup="conv()">
+                <label>Result</label>
+                <input class="result" type="number" id="resultNumb" placeholder="the result is..." disabled/>
+            </div>
+        <!--change background color-->
+            <div class="change">
+                <b>Change Background color</b><br />
+                <input class="typecolor" id="color" placeholder="type the color">
+                <button type="button" class="buttonchange" onclick="change()">
+                    Change Background Color
+                </button>
+            </div>
+    </div>    
+</body>
+    <script src="./Convert.js"></script>
+    <script src="./Operate.js"></script>
+    <script src="./dateTime.js"></script>
+</html>
